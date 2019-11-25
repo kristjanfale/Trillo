@@ -15,13 +15,60 @@
   </head>
   <body>
     <div class="container">
+      <!-- HEADER -->
       <header class="header">
-        Header
+        <!-- Logo -->
+        <img src="img/logo.png" alt="trillo logo" class="logo" />
+
+        <!-- Search Input -->
+        <form action="#" class="search">
+          <input
+            type="text"
+            class="search__input"
+            placeholder="Search hotels"
+          />
+          <!-- SVG Icon Search -->
+          <button class="search__button">
+            <svg class="search__icon">
+              <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+            </svg>
+          </button>
+        </form>
+
+        <!-- User Navigation -->
+        <nav class="user-nav">
+          <!-- SVG Icon Bookmark -->
+          <div class="user-nav__icon-box">
+            <svg class="user-nav__icon">
+              <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+            </svg>
+            <span class="user-nav__notification">7</span>
+          </div>
+          <!-- SVG Icon Chat -->
+          <div class="user-nav__icon-box">
+            <svg class="user-nav__icon">
+              <use xlink:href="img/sprite.svg#icon-chat"></use>
+            </svg>
+            <span class="user-nav__notification">4</span>
+          </div>
+          <!-- User IMG -->
+          <div class="user-nav__user">
+            <img
+              src="img/user.jpg"
+              alt="User photo"
+              class="user-nav__user-photo"
+            />
+            <span class="user-nav__user-name">Jonas</span>
+          </div>
+        </nav>
       </header>
+
       <div class="content">
+        <!-- SIDEBAR NAVIGATION -->
         <nav class="sidebar">
           Navigation
         </nav>
+        <!-- MAIN HOTEL VIEW -->
         <main class="main">
           Main view
         </main>

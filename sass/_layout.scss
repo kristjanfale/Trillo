@@ -25,11 +25,17 @@
   background-color: var(--color-grey-dark-1);
 
   flex: 0 0 18%; // flex-grow, flex-shrink, flex-basis
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .main {
   background-color: #fff;
-  background-color: red;
+
+  // TEST
+  height: 70rem;
 
   flex: 1; // flex-grow: 1; --> element can grow over all available(white) space
 }

@@ -1,11 +1,12 @@
 //////////////////////////////////////
+// HEADER
+
 // LOGO
 .logo {
   height: 3.25rem;
   margin-left: 2rem;
 }
 
-//////////////////////////////////////
 // SEARCH
 .search {
   flex: 0 0 40%;
@@ -65,7 +66,6 @@
   }
 }
 
-//////////////////////////////////////
 // USER NAVIGATION
 .user-nav {
   align-self: stretch;
@@ -122,3 +122,81 @@
     font-size: 1.6rem;
   }
 }
+
+//////////////////////////////////////
+// SIDEBAR NAVIGATION
+
+// NAVIGATION
+.side-nav {
+  font-size: 1.5rem;
+  list-style: none;
+  margin-top: 3.5rem;
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0.3rem;
+      background-color: var(--color-primary);
+      transform: scaleY(0);
+      transition: transform 200ms, width 350ms 200ms cubic-bezier(1, 0, 0, 1),
+        background-color 100ms;
+    }
+  }
+
+  // When we hover the <li> and the active <li>
+  &__item:hover::before,
+  &__item--active::before {
+    transform: scaleY(1);
+    width: 100%;
+  }
+
+  &__item:active::before {
+    background-color: var(--color-primary-light);
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: var(--color-grey-light-1);
+      display: block;
+      padding: 1.5rem 3rem;
+      z-index: 10; // This only works if we have specified position (in this case: relative)
+      position: relative;
+
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__icon {
+    height: 1.75rem;
+    width: 1.75rem;
+    margin-right: 2rem;
+    fill: currentColor; // currentColor is the color of the current OR parent element
+  }
+}
+
+// LEGAL TEXT
+.legal {
+  font-size: 1.2rem;
+  color: var(--color-grey-light-4);
+  text-align: center;
+  padding: 2.5rem;
+}
+
+//////////////////////////////////////
+// MAIN HOTEL VIEW
+
+//

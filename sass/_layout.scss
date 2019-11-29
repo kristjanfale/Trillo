@@ -10,7 +10,7 @@
 .header {
   height: 7rem;
   background-color: #fff;
-  border-bottom: var(--color-grey-light-2) 1px solid;
+  border-bottom: var(--line);
 
   display: flex;
   justify-content: space-between;
@@ -34,8 +34,26 @@
 .main {
   background-color: #fff;
 
-  // TEST
-  height: 70rem;
-
   flex: 1; // flex-grow: 1; --> element can grow over all available(white) space
+}
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line);
+}
+
+.description {
+  font-size: 1.4rem;
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+}
+
+.user-reviews {
+  background-color: cyan;
+  flex: 1;
 }

@@ -36,6 +36,13 @@ Grey dark 3: #999
   --line: var(--color-grey-light-2) 1px solid;
 }
 
+// 16px = 1em
+$bp-1200: 75em; // 1200px
+$bp-1100: 68.75em; // 1100px
+$bp-900: 56.25em; // 900px
+$bp-600: 37.5em; // 600px
+$bp-500: 31.25em; // 500px
+
 *,
 *::before,
 *::after {
@@ -50,6 +57,10 @@ html {
   /* font-size: 16px = 100% = 1rem */
   /* font-size: 10px = 62.5% = 1rem */
   font-size: 62.5%; // 1rem = 10px -> this doesn't affect @media queries
+
+  @media only screen and (max-width: $bp-1100) {
+    font-size: 50%; //1rem = 8px, 8/16 = 50%
+  }
 }
 
 body {
